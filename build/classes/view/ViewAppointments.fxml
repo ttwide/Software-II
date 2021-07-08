@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="664.0" prefWidth="1036.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewAppointmentsController">
+   <children>
+      <HBox layoutY="-1.0" prefHeight="96.0" prefWidth="1042.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="96.0" prefWidth="684.0" text="APPOINTMENTS">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <HBox prefHeight="96.0" prefWidth="163.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="120.0" prefWidth="199.0" text="View by">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ComboBox fx:id="viewComboBox" onAction="#onActionComboBox" prefWidth="150.0" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox layoutX="29.0" layoutY="89.0" prefHeight="392.0" prefWidth="1033.0">
+         <children>
+            <TableView fx:id="appointmentTableView" prefHeight="392.0" prefWidth="1002.0">
+              <columns>
+                  <TableColumn fx:id="appointmentIdCol" prefWidth="61.0" text="App Id" />
+                <TableColumn fx:id="customerNameCol" prefWidth="262.0" text="Customer Name" />
+                <TableColumn fx:id="customerIdCol" prefWidth="163.0" text="Cust Id" />
+                  <TableColumn fx:id="typeCol" prefWidth="201.0" text="Type" />
+                  <TableColumn fx:id="startTimeCol" prefWidth="158.0" text="Start Time" />
+                  <TableColumn fx:id="endTimeCol" prefWidth="176.0" text="End Time" />
+              </columns>
+            </TableView>
+         </children></HBox>
+      <HBox alignment="CENTER" layoutY="481.0" prefHeight="69.0" prefWidth="1062.0">
+         <children>
+            <Button maxWidth="-Infinity" mnemonicParsing="false" onAction="#onActionAddButton" prefWidth="65.0" text="Add">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button maxWidth="-Infinity" mnemonicParsing="false" onAction="#onActionUpdateButton" prefWidth="65.0" text="Update">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button layoutX="69.0" layoutY="10.0" maxWidth="-Infinity" mnemonicParsing="false" onAction="#onActionDeleteButton" prefWidth="65.0" text="Delete" />
+         </children></HBox>
+      <HBox alignment="CENTER" layoutY="543.0" prefHeight="86.0" prefWidth="1062.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onActionTotalApptsByUser" text="Total Appts By User">
+               <HBox.margin>
+                  <Insets bottom="20.0" right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#onActionApptsByUser" text="Appts By User ">
+               <HBox.margin>
+                  <Insets bottom="20.0" right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#onActionTypeByMonthAppt" text="Type By Month ">
+               <HBox.margin>
+                  <Insets bottom="20.0" right="10.0" />
+               </HBox.margin></Button>
+            <Button maxWidth="-Infinity" mnemonicParsing="false" onAction="#onActionBackButton" prefWidth="65.0" text="Back">
+               <HBox.margin>
+                  <Insets bottom="20.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
